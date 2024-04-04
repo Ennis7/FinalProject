@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&display=swap');
+
+body{
+    background-image: url(../media/background.jpg);
+    min-height: 500px; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width:890px;
+    margin-left:auto;
+  }
+  #navbar {
+    overflow: hidden;
+    background-color: hsl(154, 75%, 11%);
+    border-radius: 25px 25px 0 0;
+  }
+  
+  #navbar a {
+    float: left;
+    color: #f2f2f2;
+    padding: 26px 46px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: 'inter', sans-serif;
+  }
+  
+  #navbar a:hover {
+    background-color: rgb(187, 142, 8);
+    color: black;
+  }
+  
+  section {
+    padding: 30px;
+    background-color: rgb(205, 202, 200);
+    font-size:1.2em;
+    opacity:.9;   
+    font-family: 'IBM Plex Serif', sans-serif; 
+    font-size: 20px;
+    border-radius: 0 0 25px 25px;
+  }
+ 

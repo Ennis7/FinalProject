@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Crossword</title>
+    <link rel="stylesheet" href="css/crossword.css">
+</head>
+<body>
+    <nav id="navbar">
+        <a id="home" href="./finalProject.html">Home</a>
+        <a id="DD" href="./dragDrop.html">Drag & Drop</a>
+        <a id="Crossword" href="./crossword.html">Crossword</a>
+        <a id="MM" href="">Memory Match</a>
+        <a id="readMe" href="./readMe.txt">Read Me</a>
+    </nav>
+    <div class="grid">
+        <div class="clues">
+    <h1>Coding Crossword</h1>
+       <h2>Down:</h2>
+           <p>1: True or false</p>
+           <p>2: Temporarily stores pieces of information</p>
+           <p>3: Values associated with objects; can be data or functions</p>
+           <p>6: Has no value</p>
+           <p>8: ||</p>
+           <p>9: !</p>
+           <p>12: Can be used when working with lists</p>
+           <p>13: Action or occurrence to which a program can respond</p>
+   
+       <h2>Across:</h2>
+           <p>4: &&</p>
+           <p>5: Joining two or more strings</p>
+           <p>7: Window.alert() is a</p>
+           <p>10: Typically defined using classes</p>
+           <p>11: Switch statements contain these</p>
+           <p>14: Text data types representing a sequence of characters</p>
+           <br>
+
+           <input type="text" id="input1">
+        <button id="myBtn" onclick="submit1()">Submit</button>
+        </div>
+    <table class="table">
+        <tr>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id ="a1" class = "white"><sup>1</sup></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a2" class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a3" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a4" class = "white"><sup>2</sup></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a5" class = "white"><sup>3</sup></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a6" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a7"  class = "white"><sup>4</sup></td>
+            <td id="a8"  class = "white"></td>
+            <td id="a9"  class = "white"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a10"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a11"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a12" class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td id="a13" class = "white"><sup>5</sup></td>
+            <td id="a14" class = "white"></td>
+            <td id="a15" class = "white"></td>
+            <td id="a16" class = "white"></td>
+            <td id="a17" class = "white"></td>
+            <td id="a18" class = "white"></td>
+            <td id="a19" class = "white"></td>
+            <td id="a20" class = "white"></td>
+            <td id="a21" class = "white"></td>
+            <td id="a22" class = "white"></td>
+            <td id="a23" class = "white"></td>
+            <td id="a24" class = "white"></td>
+            <td id="a25" class = "white"><sup>6</sup></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a26" class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a27" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a28" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a29" class = "white"></td>
+        </tr>
+        <tr>
+            <td id="a30" class = "white"><sup>7</sup></td>
+            <td id="a31" class = "white"></td>
+            <td id="a32" class = "white"></td>
+            <td id="a33" class = "white"></td>
+            <td id="a34" class = "white"><sup>8</sup></td>
+            <td id="a35" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a36" class = "white"><sup>9</sup></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a37" class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a38" class = "white"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a39"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a40"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a41"  class = "white"><sup>10</sup></td>
+            <td id="a42"  class = "white"></td>
+            <td id="a43"  class = "white"></td>
+            <td id="a44"  class = "white"></td>
+            <td id="a45"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a46"  class = "white"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a47"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a48"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a49"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a50"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a51"  class = "white"><sup>11</sup></td>
+            <td id="a52"  class = "white"><sup>12</sup></td>
+            <td id="a53"  class = "white"></td>
+            <td id="a54"  class = "white"><sup>13</sup></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a55"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a56"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a57"  class = "white"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td id="a58"  class = "white"><sup>14</sup></td>
+            <td id="a59"  class = "white"></td>
+            <td id="a60"  class = "white"></td>
+            <td id="a61"  class = "white"></td>
+            <td id="a62"  class = "white"></td>
+            <td id="a63"  class = "white"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a64"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a65"  class = "white"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a66"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a67"  class = "white"></td>
+            <td class = "white2"></td>
+        </tr>
+        <tr>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td class = "white2"></td>
+            <td id="a68"  class = "white"></td>
+            <td class = "white2"></td>
+            <td id="a69"  class = "white"></td>
+            <td class = "white2"></td>
+        </tr>
+    </table>
+    </div>
+   
+<script src="js/crossword.js"></script>
+</body>
+</html>
