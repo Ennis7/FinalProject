@@ -1,5 +1,5 @@
 
-//letting the user use the enter button on their keyboard 
+//function to allow users to submit answer by pressing the Enter key
 let input  = document.getElementById("input1");
 input.addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -8,14 +8,20 @@ input.addEventListener("keypress", function(event){
         event.target.value = "";
     }
 });
-
+//List of words to be guessed 
 let list = ["boolean","model","variables","properties","and","concatenation","method","not","null","or","case","array","event","string"];
 
-//assign the letter to a spot on the table with ids
+//function to assign letters to their corresponding spots on the table
 function submit1(){
+    //getting entered word from the input field
     let enterWord = input1.value;
+
+    //convert word to lowercase
     let result = enterWord.toLowerCase();
+
+    //Check if the entered word matches any words in the array
     if (result == list[0]){
+        //if the word matches assign letters to specific cells in the table
         a1.innerHTML = "B";
         a2.innerHTML = "O";
         a3.innerHTML = "O";

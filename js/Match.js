@@ -15,33 +15,38 @@ const matches = [
   { word: "array", symbol: "[ ]" },
 ];
 
-let cards = [];
-let selectedCard = null;
 
+let cards = []; //Array to store card objects
+let selectedCard = null; //To keep track of selected card 
+
+//Retrieving canvas element and its context
 const canvas = document.getElementById("myCanvas");
 const ctx = canvas.getContext("2d");
 
-//card size and table layout
+//Card dimensions and layout settings
 const cardWidth = 175;
 const cardHeight = 150;
 const padding = 10;
 const cols = 5;
 const rows = Math.ceil((matches.length * 2) / cols);
 
+//setting canvas size based on card dimensions and layout
 canvas.width = (cardWidth + padding) * cols;
 canvas.height = (cardHeight + padding) * rows;
 
-//card style, font and layout
+//function to render a card on the canvas
 function renderCard(x, y, text, selected = false) {
+  //drawing card rectangle 
   ctx.fillStyle = selected ? "rgb(187, 142, 8)" : "hsl(154, 75%, 16%)";
   ctx.fillRect(x, y, cardWidth, cardHeight);
+  //drawing text on the card
   ctx.fillStyle = "white";
   ctx.font = "20px Arial";
   ctx.textAlign = "center";
   ctx.fillText(text, x + cardWidth / 2, y + cardHeight / 2);
 }
 
-//shuffles the tiles
+//Function to shuffle an array
 function shuffle(array) {
   let currentIndex = array.length,
     temporaryValue,
@@ -58,16 +63,18 @@ function shuffle(array) {
 
   return array;
 }
-//
+//Function to render cards on the canvas
 function renderCards(mix = false) {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   if (cards.length === 0) {
+    //Generating card objects for each match
     matches.forEach((match, index) => {
       const col = index % cols;
       const row = Math.floor(index / cols);
       const x = col * (cardWidth + padding);
       const y = row * (cardHeight + padding) * 2;
 
+    // creating two cards for each match
       cards.push({
         x,
         y,
@@ -87,7 +94,7 @@ function renderCards(mix = false) {
 
     if (mix) cards = shuffle(cards);
   }
-
+// Rendering each card on the canvas
   cards.forEach((card, index) => {
     const col = index % cols;
     const row = Math.floor(index / cols);
@@ -100,7 +107,7 @@ function renderCards(mix = false) {
     renderCard(card.x, card.y, card.text, card.selected);
   });
 }
-//function for if the cards are a match or not
+//function to handle click event on the canvas
 function checkClick(x, y) {
   cards.forEach((card) => {
     if (
@@ -111,19 +118,23 @@ function checkClick(x, y) {
     ) {
       console.log(card);
       if (selectedCard === null) {
+        //selecting the clicked card
         selectedCard = card;
         card.selected = true;
         renderCards();
       } else {
         if (selectedCard.match === card.text) {
           console.log("Matched");
+          //if cards match, remove them from the array
           cards = cards.filter((c) => c !== card && c !== selectedCard);
           selectedCard = null;
+          //re-render cards with a slight delay to show match
           setTimeout(() => {
             renderCards(true);
           }, 50);
         } else {
           console.log("Not matched");
+          //if cards don't match, deselect them
           card.selected = false;
           cards.find((c) => c === selectedCard).selected = false;
           selectedCard = null;
@@ -134,7 +145,7 @@ function checkClick(x, y) {
   });
 }
 
-//
+//adding click event listener to the canvas
 canvas.addEventListener("click", (event) => {
   const rect = canvas.getBoundingClientRect();
   const x = event.clientX - rect.left;
@@ -142,5 +153,5 @@ canvas.addEventListener("click", (event) => {
 
   checkClick(x, y);
 });
-
+//rendering initial shuffled cards on the canvas
 renderCards(true);
