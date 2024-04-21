@@ -1,4 +1,5 @@
 
+//letting the user use the enter button on their keyboard 
 let input  = document.getElementById("input1");
 input.addEventListener("keypress", function(event){
     if (event.key === "Enter"){
@@ -10,6 +11,7 @@ input.addEventListener("keypress", function(event){
 
 let list = ["boolean","model","variables","properties","and","concatenation","method","not","null","or","case","array","event","string"];
 
+//assign the letter to a spot on the table with ids
 function submit1(){
     let enterWord = input1.value;
     let result = enterWord.toLowerCase();

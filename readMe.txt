@@ -5,7 +5,7 @@ GAME DESCRIPTIONS
 
 2. Crossword: Read the clues for across and down words and do your best to fill in the ones you know. Pay attention to word length and use filled letters to help with other clues. When finished click the show answer to see how you did!
 
-3. Memory Match: Match the word or phrase to the corresponding method or property.
+3. Word Match: Match the words to the corresponding tile.
 
 --------------
 FILE DIRECTORY
@@ -27,10 +27,10 @@ FinalProject/crossword.html
 FinalProject/css/crossword.css
 FinalProject/js/crossword.js
 
-- Memory Match
-FinalProject/memoryMatch.html
-FinalProject/css/memoryMatch.css
-FinalProject/js/memoryMatch.js
+- Word Match
+FinalProject/Match.html
+FinalProject/css/Match.css
+FinalProject/js/Match.js
 
 - Read Me
 FinalProject/readMe.txt

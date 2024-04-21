@@ -8,7 +8,7 @@ document.getElementById("Crossword").addEventListener("mouseover",function(){
     document.getElementById("message").innerHTML="<p>Crossword:</p><p>Read the clues for across and down words and do your best to fill in the ones you know. Pay attention to word length and use filled letters to help with other clues!</p>";
 })
 document.getElementById("MM").addEventListener("mouseover",function(){
-    document.getElementById("message").innerHTML="<p>Memory Match:</p><p>Match the word or phrase to the corresponding method or property.</p>";
+    document.getElementById("message").innerHTML="<p>Word Match:</p><p>Word Match: Match the words to the corresponding tile.</p>";
 })
 document.getElementById("readMe").addEventListener("mouseover",function(){
     document.getElementById("message").innerHTML="<p>Read Me:</p><p>Includes game descriptions, file structure, contact and copyright information.</p>";
